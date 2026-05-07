@@ -13,9 +13,9 @@ Viết lại toàn bộ **grokPY** (Python) → **C# WPF .NET 8**
 
 ## 📍 TRẠNG THÁI HIỆN TẠI
 ```
-PHASE: 4 — Bắt đầu Auth/Login Services
-LAST_COMPLETED_TASK: Phase 1+2+3 hoàn thành — Build succeeded, F5 chạy được
-NEXT_TASK: PHASE_4 / Task 4.1 — LoginService.cs
+PHASE: 4 — Auth/Login Services
+LAST_COMPLETED_TASK: Task 4.1 LoginService.cs + Task 4.2 TokenExtractor.cs
+NEXT_TASK: PHASE_4 / Task 4.3 — StatsigDiscovery.cs (lấy x-statsig-id cho Grok)
 ```
 
 ---
@@ -23,15 +23,15 @@ NEXT_TASK: PHASE_4 / Task 4.1 — LoginService.cs
 ## ✅ CHECKLIST TIẾN ĐỘ
 
 ### PHASE 1 — Setup dự án & cấu trúc
-- [ ] **1.1** Tạo GitHub repo `grokPY-CSharp`
-- [ ] **1.2** Tạo `.gitignore` cho C# / .NET
-- [ ] **1.3** Tạo Solution file `GrokPY.sln`
-- [ ] **1.4** Tạo project `GrokPY.App` (WPF .NET 8)
-- [ ] **1.5** Tạo project `GrokPY.Core` (Class Library)
-- [ ] **1.6** Tạo project `GrokPY.Services` (Class Library)
-- [ ] **1.7** Tạo `README.md` cơ bản
-- [ ] **1.8** Thêm NuGet packages cần thiết
-- [ ] **1.9** Push lên GitHub, verify CI/CD build pass
+- [x] **1.1** Tạo GitHub repo `grokPY-CSharp`
+- [x] **1.2** Tạo `.gitignore` cho C# / .NET
+- [x] **1.3** Tạo Solution file `GrokPY.sln`
+- [x] **1.4** Tạo project `GrokPY.App` (WPF .NET 8)
+- [x] **1.5** Tạo project `GrokPY.Core` (Class Library)
+- [x] **1.6** Tạo project `GrokPY.Services` (Class Library)
+- [x] **1.7** Tạo `README.md` cơ bản
+- [x] **1.8** Thêm NuGet packages cần thiết
+- [x] **1.9** Push lên GitHub, verify CI/CD build pass
 
 ### PHASE 2 — Core Infrastructure
 - [ ] **2.1** `Core/Models/AccountConfig.cs`
@@ -49,8 +49,8 @@ NEXT_TASK: PHASE_4 / Task 4.1 — LoginService.cs
 - [ ] **3.4** `Services/Chrome/ChromeProfileManager.cs` — quản lý profiles
 
 ### PHASE 4 — Login & Auth
-- [ ] **4.1** `Services/Auth/LoginService.cs` — tự động login Google qua Chrome
-- [ ] **4.2** `Services/Auth/TokenExtractor.cs` — lấy access_token, cookie, sessionId, projectId
+- [x] **4.1** `Services/Auth/LoginService.cs` — tự động login Google qua Chrome
+- [x] **4.2** `Services/Auth/TokenExtractor.cs` — lấy access_token, cookie, sessionId, projectId
 - [ ] **4.3** `Services/Auth/StatsigDiscovery.cs` — lấy x-statsig-id cho Grok
 
 ### PHASE 5 — API Services
@@ -230,7 +230,8 @@ Google Login flow:
 
 ## 🗓️ LOG THAY ĐỔI
 ```
-[YYYY-MM-DD] Session 1: (chưa có)
+[2026-05-07] Session 1: Phase 1+2+3 hoàn thành — Build succeeded
+[2026-05-07] Session 2: Task 4.1 LoginService + 4.2 TokenExtractor hoàn thành
 ```
 
 ---
