@@ -1,0 +1,10 @@
+🚀 Bắt đầu ngay — 4 bước
+Bước 1: Tạo repo GitHub tên grokPY-CSharp, clone về máy
+Bước 2: Đẩy 6 file trên lên repo (để trong root folder):
+	build.yml → đặt vào .github/workflows/build.yml
+	Còn lại → root của repo
+Bước 3: Chạy lệnh tạo solution (trong ROADMAP.md → Bước 1.1)
+Bước 4: Mỗi khi muốn AI viết tiếp, copy prompt trong AI_PROMPT.md → paste vào Claude/GPT → AI sẽ tự đọc PROGRESS.md và biết làm gì tiếp theo
+
+💡 Điểm mấu chốt
+PROGRESS.md là "bộ nhớ" của AI — mỗi lần AI hoàn thành task, nó cập nhật file này. Lần sau bắt đầu session mới, AI đọc file này là biết ngay đang ở đâu, không cần giải thích lại từ đầu.
