@@ -13,9 +13,9 @@ Viết lại toàn bộ **grokPY** (Python) → **C# WPF .NET 8**
 
 ## 📍 TRẠNG THÁI HIỆN TẠI
 ```
-PHASE: 4 — Auth/Login Services
-LAST_COMPLETED_TASK: Task 4.1 LoginService.cs + Task 4.2 TokenExtractor.cs
-NEXT_TASK: PHASE_4 / Task 4.3 — StatsigDiscovery.cs (lấy x-statsig-id cho Grok)
+PHASE: 5 — API Services
+LAST_COMPLETED_TASK: Task 4.3 StatsigDiscovery.cs — Phase 4 hoàn thành
+NEXT_TASK: PHASE_5 / Task 5.1 — GoogleImageService.cs (tạo ảnh Imagen 4)
 ```
 
 ---
@@ -51,7 +51,7 @@ NEXT_TASK: PHASE_4 / Task 4.3 — StatsigDiscovery.cs (lấy x-statsig-id cho Gr
 ### PHASE 4 — Login & Auth
 - [x] **4.1** `Services/Auth/LoginService.cs` — tự động login Google qua Chrome
 - [x] **4.2** `Services/Auth/TokenExtractor.cs` — lấy access_token, cookie, sessionId, projectId
-- [ ] **4.3** `Services/Auth/StatsigDiscovery.cs` — lấy x-statsig-id cho Grok
+- [x] **4.3** `Services/Auth/StatsigDiscovery.cs` — lấy x-statsig-id cho Grok
 
 ### PHASE 5 — API Services
 - [ ] **5.1** `Services/Api/GoogleImageService.cs` — tạo ảnh (Imagen 4)
@@ -232,6 +232,7 @@ Google Login flow:
 ```
 [2026-05-07] Session 1: Phase 1+2+3 hoàn thành — Build succeeded
 [2026-05-07] Session 2: Task 4.1 LoginService + 4.2 TokenExtractor hoàn thành
+[2026-05-07] Session 3: Task 4.3 StatsigDiscovery — Phase 4 hoàn thành
 ```
 
 ---
