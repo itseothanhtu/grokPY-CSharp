@@ -1,0 +1,11 @@
+<UserControl x:Class="GrokPY.App.Views.Tabs.TabSettings"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Background="{StaticResource BgBrush}">
+    <Grid Margin="16">
+        <TextBlock Text="TabSettings — đang phát triển..."
+                   Foreground="{StaticResource MutedBrush}"
+                   FontSize="14"
+                   VerticalAlignment="Center" HorizontalAlignment="Center"/>
+    </Grid>
+</UserControl>
