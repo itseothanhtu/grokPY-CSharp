@@ -13,9 +13,9 @@ Viết lại toàn bộ **grokPY** (Python) → **C# WPF .NET 8**
 
 ## 📍 TRẠNG THÁI HIỆN TẠI
 ```
-PHASE: 4 — Bắt đầu Auth/Login Services
-LAST_COMPLETED_TASK: Phase 1+2+3 hoàn thành — Build succeeded, F5 chạy được
-NEXT_TASK: PHASE_4 / Task 4.1 — LoginService.cs
+PHASE: 0 — Chưa bắt đầu
+LAST_COMPLETED_TASK: (chưa có)
+NEXT_TASK: PHASE_1 / Task 1.1 — Tạo GitHub repo + cấu trúc solution
 ```
 
 ---
