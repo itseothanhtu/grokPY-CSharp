@@ -1,0 +1,61 @@
+## .gitignore cho GrokPY-CSharp (.NET 8 WPF)
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+[Ee]xpress/
+publish/
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+!packages/repositories.config
+*.lock.json
+project.lock.json
+
+# Rider
+.idea/
+*.sln.iml
+
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Dữ liệu runtime (Chrome profiles, configs)
+data_general/
+chrome_user_data/
+chrome_user_data_grok/
+*.log
+
+# Sensitive data - KHÔNG push lên GitHub
+config.json
+user_data.txt
+license_state.json
+
+# Build output
+publish/
+*.exe
+!build.bat

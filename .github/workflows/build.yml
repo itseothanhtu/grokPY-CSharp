@@ -1,0 +1,65 @@
+name: Build GrokPY-CSharp
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup .NET 8
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Restore dependencies
+      run: dotnet restore GrokPY.sln
+
+    - name: Build
+      run: dotnet build GrokPY.sln --configuration Release --no-restore
+
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: GrokPY-Build
+        path: '**/bin/Release/**/*.exe'
+        if-no-files-found: ignore
+
+  release:
+    # Chỉ chạy khi push tag v*
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: windows-latest
+    needs: build
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup .NET 8
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Publish single-file exe
+      run: |
+        dotnet publish GrokPY.App/GrokPY.App.csproj `
+          -c Release `
+          -r win-x64 `
+          --self-contained true `
+          -p:PublishSingleFile=true `
+          -p:PublishReadyToRun=true `
+          -o ./publish
+
+    - name: Create Release
+      uses: softprops/action-gh-release@v2
+      with:
+        files: publish/GrokPY.App.exe
+        name: GrokPY ${{ github.ref_name }}
+        draft: false
+        prerelease: false
