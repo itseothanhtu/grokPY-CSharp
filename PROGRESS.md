@@ -13,10 +13,9 @@ Viết lại toàn bộ **grokPY** (Python) → **C# WPF .NET 8**
 
 ## 📍 TRẠNG THÁI HIỆN TẠI
 ```
-PHASE: 6 — Workflow Engine
-LAST_COMPLETED_TASK: Phase 5 HOÀN THÀNH — Tất cả API Services
-NEXT_TASK: PHASE_6 / Task 6.1 — WorkflowRunner.cs
-```
+PHASE: 7 — WPF UI (fill nội dung các tab)
+LAST_COMPLETED_TASK: Phase 6 HOÀN THÀNH — WorkflowControl + WorkflowRunner + IdeaToVideoWorkflow
+NEXT_TASK: PHASE_7 / Task 7.2 — TabTextToVideo.xaml (UI đầy đủ)```
 
 ---
 
@@ -65,9 +64,9 @@ NEXT_TASK: PHASE_6 / Task 6.1 — WorkflowRunner.cs
 - [x] **5.9** `Services/Media/VideoMerger.cs` — ghép video
 
 ### PHASE 6 — Workflow Engine
-- [ ] **6.1** `Services/Workflow/WorkflowRunner.cs` — chạy workflow nền
-- [ ] **6.2** `Services/Workflow/IdeaToVideoWorkflow.cs` — idea→video pipeline
-- [ ] **6.3** `Services/Workflow/WorkflowControl.cs` — start/stop/pause
+- [x] **6.1** `Services/Workflow/WorkflowRunner.cs` — chạy workflow nền
+- [x] **6.2** `Services/Workflow/IdeaToVideoWorkflow.cs` — idea→video pipeline
+- [x] **6.3** `Services/Workflow/WorkflowControl.cs` — start/stop/pause
 
 ### PHASE 7 — WPF UI
 - [ ] **7.1** `App/MainWindow.xaml` + `MainWindow.xaml.cs`
@@ -236,6 +235,7 @@ Google Login flow:
 [2026-05-11] Session 4: Task 5.1 GoogleImageService + 5.3 VeoTextToVideo + 5.5 GrokTextToVideo
 [2026-05-11] Session 5: Task 5.2 I2I + 5.4 VeoI2V + 5.6 GrokI2V
 [2026-05-11] Session 6: Task 5.7+5.8+5.9 — Phase 5 XONG
+[2026-05-11] Session 7: Task 6.1+6.2+6.3 — Phase 6 XONG
 ```
 
 ---
