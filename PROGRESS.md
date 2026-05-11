@@ -13,9 +13,9 @@ Viết lại toàn bộ **grokPY** (Python) → **C# WPF .NET 8**
 
 ## 📍 TRẠNG THÁI HIỆN TẠI
 ```
-PHASE: 5 — API Services
-LAST_COMPLETED_TASK: Task 4.3 StatsigDiscovery.cs — Phase 4 hoàn thành
-NEXT_TASK: PHASE_5 / Task 5.1 — GoogleImageService.cs (tạo ảnh Imagen 4)
+PHASE: 5 — API Services (gần xong)
+LAST_COMPLETED_TASK: Task 5.2+5.4+5.6 — I2I, I2V (Veo+Grok) hoàn thành
+NEXT_TASK: PHASE_5 / Task 5.7 — CharacterSyncService.cs
 ```
 
 ---
@@ -30,7 +30,7 @@ NEXT_TASK: PHASE_5 / Task 5.1 — GoogleImageService.cs (tạo ảnh Imagen 4)
 - [x] **1.5** Tạo project `GrokPY.Core` (Class Library)
 - [x] **1.6** Tạo project `GrokPY.Services` (Class Library)
 - [x] **1.7** Tạo `README.md` cơ bản
-- [x] **1.8** Thêm NuGet packages cần thiết
+- [x] **1.8** Thêm NuGet packages cần thiếtd
 - [x] **1.9** Push lên GitHub, verify CI/CD build pass
 
 ### PHASE 2 — Core Infrastructure
@@ -54,12 +54,12 @@ NEXT_TASK: PHASE_5 / Task 5.1 — GoogleImageService.cs (tạo ảnh Imagen 4)
 - [x] **4.3** `Services/Auth/StatsigDiscovery.cs` — lấy x-statsig-id cho Grok
 
 ### PHASE 5 — API Services
-- [ ] **5.1** `Services/Api/GoogleImageService.cs` — tạo ảnh (Imagen 4)
-- [ ] **5.2** `Services/Api/GoogleImageToImageService.cs` — image to image
-- [ ] **5.3** `Services/Api/VeoTextToVideoService.cs` — text→video (Google Veo 3.1)
-- [ ] **5.4** `Services/Api/VeoImageToVideoService.cs` — image→video (Google Veo 3.1)
-- [ ] **5.5** `Services/Api/GrokTextToVideoService.cs` — text→video qua Grok
-- [ ] **5.6** `Services/Api/GrokImageToVideoService.cs` — image→video qua Grok
+- [x] **5.1** `Services/Api/GoogleImageService.cs` — tạo ảnh (Imagen 4)
+- [x] **5.2** `Services/Api/GoogleImageToImageService.cs` — image to image
+- [x] **5.3** `Services/Api/VeoTextToVideoService.cs` — text→video (Google Veo 3.1)
+- [x] **5.4** `Services/Api/VeoImageToVideoService.cs` — image→video (Google Veo 3.1)
+- [x] **5.5** `Services/Api/GrokTextToVideoService.cs` — text→video qua Grok
+- [x] **5.6** `Services/Api/GrokImageToVideoService.cs` — image→video qua Grok
 - [ ] **5.7** `Services/Api/CharacterSyncService.cs` — lip sync / face sync
 - [ ] **5.8** `Services/Api/SoraUploadService.cs` — upload ảnh lên Sora
 - [ ] **5.9** `Services/Media/VideoMerger.cs` — ghép video
@@ -233,6 +233,8 @@ Google Login flow:
 [2026-05-07] Session 1: Phase 1+2+3 hoàn thành — Build succeeded
 [2026-05-07] Session 2: Task 4.1 LoginService + 4.2 TokenExtractor hoàn thành
 [2026-05-07] Session 3: Task 4.3 StatsigDiscovery — Phase 4 hoàn thành
+[2026-05-11] Session 4: Task 5.1 GoogleImageService + 5.3 VeoTextToVideo + 5.5 GrokTextToVideo
+[2026-05-11] Session 5: Task 5.2 I2I + 5.4 VeoI2V + 5.6 GrokI2V
 ```
 
 ---
