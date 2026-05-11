@@ -13,9 +13,9 @@ Viết lại toàn bộ **grokPY** (Python) → **C# WPF .NET 8**
 
 ## 📍 TRẠNG THÁI HIỆN TẠI
 ```
-PHASE: 5 — API Services (gần xong)
-LAST_COMPLETED_TASK: Task 5.2+5.4+5.6 — I2I, I2V (Veo+Grok) hoàn thành
-NEXT_TASK: PHASE_5 / Task 5.7 — CharacterSyncService.cs
+PHASE: 6 — Workflow Engine
+LAST_COMPLETED_TASK: Phase 5 HOÀN THÀNH — Tất cả API Services
+NEXT_TASK: PHASE_6 / Task 6.1 — WorkflowRunner.cs
 ```
 
 ---
@@ -60,9 +60,9 @@ NEXT_TASK: PHASE_5 / Task 5.7 — CharacterSyncService.cs
 - [x] **5.4** `Services/Api/VeoImageToVideoService.cs` — image→video (Google Veo 3.1)
 - [x] **5.5** `Services/Api/GrokTextToVideoService.cs` — text→video qua Grok
 - [x] **5.6** `Services/Api/GrokImageToVideoService.cs` — image→video qua Grok
-- [ ] **5.7** `Services/Api/CharacterSyncService.cs` — lip sync / face sync
-- [ ] **5.8** `Services/Api/SoraUploadService.cs` — upload ảnh lên Sora
-- [ ] **5.9** `Services/Media/VideoMerger.cs` — ghép video
+- [x] **5.7** `Services/Api/CharacterSyncService.cs` — lip sync / face sync
+- [x] **5.8** `Services/Api/SoraUploadService.cs` — upload ảnh lên Sora
+- [x] **5.9** `Services/Media/VideoMerger.cs` — ghép video
 
 ### PHASE 6 — Workflow Engine
 - [ ] **6.1** `Services/Workflow/WorkflowRunner.cs` — chạy workflow nền
@@ -235,6 +235,7 @@ Google Login flow:
 [2026-05-07] Session 3: Task 4.3 StatsigDiscovery — Phase 4 hoàn thành
 [2026-05-11] Session 4: Task 5.1 GoogleImageService + 5.3 VeoTextToVideo + 5.5 GrokTextToVideo
 [2026-05-11] Session 5: Task 5.2 I2I + 5.4 VeoI2V + 5.6 GrokI2V
+[2026-05-11] Session 6: Task 5.7+5.8+5.9 — Phase 5 XONG
 ```
 
 ---
