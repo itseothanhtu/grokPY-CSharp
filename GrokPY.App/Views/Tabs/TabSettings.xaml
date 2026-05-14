@@ -2,10 +2,138 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              Background="{StaticResource BgBrush}">
-    <Grid Margin="16">
-        <TextBlock Text="TabSettings — đang phát triển..."
-                   Foreground="{StaticResource MutedBrush}"
-                   FontSize="14"
-                   VerticalAlignment="Center" HorizontalAlignment="Center"/>
-    </Grid>
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="20">
+
+            <!-- ── TIÊU ĐỀ ── -->
+            <TextBlock Text="⚙️ Cài đặt tài khoản"
+                       Style="{StaticResource SectionTitle}"
+                       FontSize="16" Margin="0,0,0,16"/>
+
+            <!-- ── ACCOUNT ── -->
+            <Border Background="{StaticResource SurfaceBrush}"
+                    BorderBrush="{StaticResource BorderBrush}"
+                    BorderThickness="1" CornerRadius="6" Padding="16" Margin="0,0,0,12">
+                <StackPanel>
+                    <TextBlock Text="TÀI KHOẢN GOOGLE" Style="{StaticResource SectionTitle}"/>
+
+                    <TextBlock Text="Email" Style="{StaticResource FieldLabel}"/>
+                    <TextBox x:Name="TxtEmail"/>
+
+                    <TextBlock Text="Mật khẩu" Style="{StaticResource FieldLabel}"/>
+                    <PasswordBox x:Name="TxtPassword"/>
+
+                    <TextBlock Text="Loại tài khoản" Style="{StaticResource FieldLabel}"/>
+                    <ComboBox x:Name="CmbAccountType" Margin="0,0,0,12">
+                        <ComboBoxItem Content="ULTRA" IsSelected="True"/>
+                        <ComboBoxItem Content="PRO"/>
+                        <ComboBoxItem Content="NORMAL"/>
+                    </ComboBox>
+
+                    <Button x:Name="BtnSaveAccount"
+                            Content="💾 Lưu tài khoản"
+                            Style="{StaticResource PrimaryButton}"
+                            HorizontalAlignment="Left"
+                            Click="BtnSaveAccount_Click"/>
+                </StackPanel>
+            </Border>
+
+            <!-- ── TOKEN ── -->
+            <Border Background="{StaticResource SurfaceBrush}"
+                    BorderBrush="{StaticResource BorderBrush}"
+                    BorderThickness="1" CornerRadius="6" Padding="16" Margin="0,0,0,12">
+                <StackPanel>
+                    <TextBlock Text="TOKEN GOOGLE AI" Style="{StaticResource SectionTitle}"/>
+
+                    <TextBlock Text="Access Token" Style="{StaticResource FieldLabel}"/>
+                    <TextBox x:Name="TxtAccessToken" Height="60"
+                             TextWrapping="Wrap" AcceptsReturn="False"/>
+
+                    <TextBlock Text="Session ID" Style="{StaticResource FieldLabel}"/>
+                    <TextBox x:Name="TxtSessionId"/>
+
+                    <TextBlock Text="Project ID" Style="{StaticResource FieldLabel}"/>
+                    <TextBox x:Name="TxtProjectId"/>
+
+                    <TextBlock Text="Cookie" Style="{StaticResource FieldLabel}"/>
+                    <TextBox x:Name="TxtCookie" Height="60"
+                             TextWrapping="Wrap" AcceptsReturn="False"/>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
+                        <Button x:Name="BtnSaveTokens"
+                                Content="💾 Lưu Tokens"
+                                Style="{StaticResource PrimaryButton}"
+                                Margin="0,0,8,0"
+                                Click="BtnSaveTokens_Click"/>
+                        <Button x:Name="BtnAutoLogin"
+                                Content="🔐 Tự động Login"
+                                Style="{StaticResource SecondaryButton}"
+                                Click="BtnAutoLogin_Click"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+            <!-- ── OUTPUT DIR ── -->
+            <Border Background="{StaticResource SurfaceBrush}"
+                    BorderBrush="{StaticResource BorderBrush}"
+                    BorderThickness="1" CornerRadius="6" Padding="16" Margin="0,0,0,12">
+                <StackPanel>
+                    <TextBlock Text="THƯ MỤC OUTPUT" Style="{StaticResource SectionTitle}"/>
+                    <TextBlock Text="Lưu ảnh và video tại" Style="{StaticResource FieldLabel}"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBox x:Name="TxtOutputDir" IsReadOnly="True"
+                                 Margin="0,0,8,0"/>
+                        <Button Grid.Column="1" Content="📂 Chọn"
+                                Style="{StaticResource SecondaryButton}"
+                                Padding="12,8"
+                                Click="BtnBrowseOutput_Click"/>
+                    </Grid>
+                </StackPanel>
+            </Border>
+
+            <!-- ── LICENSE ── -->
+            <Border Background="{StaticResource SurfaceBrush}"
+                    BorderBrush="{StaticResource BorderBrush}"
+                    BorderThickness="1" CornerRadius="6" Padding="16" Margin="0,0,0,12">
+                <StackPanel>
+                    <TextBlock Text="LICENSE" Style="{StaticResource SectionTitle}"/>
+
+                    <TextBlock Text="License Key" Style="{StaticResource FieldLabel}"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBox x:Name="TxtLicenseKey" Margin="0,0,8,0"/>
+                        <Button Grid.Column="1" Content="✅ Kích hoạt"
+                                x:Name="BtnActivateLicense"
+                                Style="{StaticResource PrimaryButton}"
+                                Padding="12,8"
+                                Click="BtnActivateLicense_Click"/>
+                    </Grid>
+
+                    <TextBlock x:Name="TxtLicenseStatus"
+                               Margin="0,8,0,0"
+                               FontSize="12"
+                               Foreground="{StaticResource MutedBrush}"/>
+
+                    <TextBlock x:Name="TxtMachineId"
+                               Margin="0,4,0,0"
+                               FontSize="11"
+                               Foreground="{StaticResource MutedBrush}"/>
+                </StackPanel>
+            </Border>
+
+            <!-- ── STATUS ── -->
+            <TextBlock x:Name="TxtStatus"
+                       Foreground="{StaticResource AccentBrush}"
+                       FontSize="12" Margin="0,8,0,0"
+                       TextWrapping="Wrap"/>
+
+        </StackPanel>
+    </ScrollViewer>
 </UserControl>

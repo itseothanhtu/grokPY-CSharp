@@ -2,10 +2,111 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              Background="{StaticResource BgBrush}">
-    <Grid Margin="16">
-        <TextBlock Text="TabGrokSettings — đang phát triển..."
-                   Foreground="{StaticResource MutedBrush}"
-                   FontSize="14"
-                   VerticalAlignment="Center" HorizontalAlignment="Center"/>
-    </Grid>
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="20" MaxWidth="700">
+            <TextBlock Text="🤖 Cài đặt Grok"
+                       Style="{StaticResource SectionTitle}"
+                       FontSize="16" Margin="0,0,0,16"/>
+
+            <!-- Statsig ID -->
+            <Border Background="{StaticResource SurfaceBrush}"
+                    BorderBrush="{StaticResource BorderBrush}"
+                    BorderThickness="1" CornerRadius="6"
+                    Padding="16" Margin="0,0,0,12">
+                <StackPanel>
+                    <TextBlock Text="X-STATSIG-ID" Style="{StaticResource SectionTitle}"/>
+                    <TextBlock Style="{StaticResource FieldLabel}"
+                               Text="Token xác thực cho Grok API"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBox x:Name="TxtStatsigId"
+                                 IsReadOnly="True"
+                                
+                                 Margin="0,0,8,0"/>
+                        <Button Grid.Column="1" Content="🔄 Lấy mới"
+                                Style="{StaticResource PrimaryButton}"
+                                Padding="10,8"
+                                Click="BtnFetchStatsig_Click"/>
+                    </Grid>
+                    <TextBlock x:Name="TxtStatsigStatus"
+                               FontSize="11" Margin="0,6,0,0"
+                               Foreground="{StaticResource MutedBrush}"/>
+                </StackPanel>
+            </Border>
+
+            <!-- Grok Chrome Profile -->
+            <Border Background="{StaticResource SurfaceBrush}"
+                    BorderBrush="{StaticResource BorderBrush}"
+                    BorderThickness="1" CornerRadius="6"
+                    Padding="16" Margin="0,0,0,12">
+                <StackPanel>
+                    <TextBlock Text="CHROME PROFILE GROK"
+                               Style="{StaticResource SectionTitle}"/>
+                    <TextBlock Style="{StaticResource FieldLabel}"
+                               Text="Profile Chrome đã đăng nhập grok.com"/>
+                    <ComboBox x:Name="CmbGrokProfile" Margin="0,0,0,8"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Content="➕ Tạo profile mới"
+                                Style="{StaticResource SecondaryButton}"
+                                Padding="10,6" Margin="0,0,8,0"
+                                Click="BtnNewProfile_Click"/>
+                        <Button Content="🗑️ Xoá profile"
+                                Style="{StaticResource SecondaryButton}"
+                                Padding="10,6"
+                                Click="BtnDeleteProfile_Click"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+            <!-- Grok Cookie -->
+            <Border Background="{StaticResource SurfaceBrush}"
+                    BorderBrush="{StaticResource BorderBrush}"
+                    BorderThickness="1" CornerRadius="6"
+                    Padding="16" Margin="0,0,0,12">
+                <StackPanel>
+                    <TextBlock Text="GROK COOKIE"
+                               Style="{StaticResource SectionTitle}"/>
+                    <TextBlock Style="{StaticResource FieldLabel}"
+                               Text="Cookie đăng nhập grok.com (tự động lấy khi dùng Lấy Statsig)"/>
+                    <TextBox x:Name="TxtGrokCookie" Height="60"
+                             TextWrapping="Wrap" AcceptsReturn="False"
+                             VerticalScrollBarVisibility="Auto"
+                            />
+                    <Button Content="💾 Lưu cookie"
+                            Style="{StaticResource PrimaryButton}"
+                            HorizontalAlignment="Left"
+                            Padding="12,6" Margin="0,8,0,0"
+                            Click="BtnSaveCookie_Click"/>
+                </StackPanel>
+            </Border>
+
+            <!-- Test Grok -->
+            <Border Background="{StaticResource SurfaceBrush}"
+                    BorderBrush="{StaticResource BorderBrush}"
+                    BorderThickness="1" CornerRadius="6"
+                    Padding="16" Margin="0,0,0,12">
+                <StackPanel>
+                    <TextBlock Text="KIỂM TRA KẾT NỐI"
+                               Style="{StaticResource SectionTitle}"/>
+                    <Button x:Name="BtnTestGrok"
+                            Content="🧪 Test kết nối Grok"
+                            Style="{StaticResource PrimaryButton}"
+                            HorizontalAlignment="Left"
+                            Padding="14,8"
+                            Click="BtnTestGrok_Click"/>
+                    <TextBlock x:Name="TxtTestResult"
+                               Margin="0,8,0,0" FontSize="12"
+                               TextWrapping="Wrap"
+                               Foreground="{StaticResource MutedBrush}"/>
+                </StackPanel>
+            </Border>
+
+            <TextBlock x:Name="TxtStatus"
+                       Foreground="{StaticResource AccentBrush}"
+                       FontSize="12" TextWrapping="Wrap"/>
+        </StackPanel>
+    </ScrollViewer>
 </UserControl>

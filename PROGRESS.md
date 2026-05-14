@@ -13,10 +13,9 @@ Viết lại toàn bộ **grokPY** (Python) → **C# WPF .NET 8**
 
 ## 📍 TRẠNG THÁI HIỆN TẠI
 ```
-PHASE: 7 — WPF UI (fill nội dung các tab)
-LAST_COMPLETED_TASK: Phase 6 HOÀN THÀNH — WorkflowControl + WorkflowRunner + IdeaToVideoWorkflow
-NEXT_TASK: PHASE_7 / Task 7.2 — TabTextToVideo.xaml (UI đầy đủ)```
-
+PHASE: 7 — WPF UI (tiếp tục các tab còn lại)
+LAST_COMPLETED_TASK: Task 7.2 TabTextToVideo + 7.4 TabCreateImage + 7.7 TabSettings + App.xaml.cs DI
+NEXT_TASK: PHASE_7 / Task 7.3 TabImageToVideo + 7.5 TabIdeaToVideo + 7.6 TabCharacterSync + 7.8 TabGrokSettings
 ---
 
 ## ✅ CHECKLIST TIẾN ĐỘ
@@ -33,19 +32,19 @@ NEXT_TASK: PHASE_7 / Task 7.2 — TabTextToVideo.xaml (UI đầy đủ)```
 - [x] **1.9** Push lên GitHub, verify CI/CD build pass
 
 ### PHASE 2 — Core Infrastructure
-- [ ] **2.1** `Core/Models/AccountConfig.cs`
-- [ ] **2.2** `Core/Models/VideoGenConfig.cs`
-- [ ] **2.3** `Core/Models/AppSettings.cs`
-- [ ] **2.4** `Core/Helpers/HmacHelper.cs` (license)
-- [ ] **2.5** `Core/Helpers/MachineIdHelper.cs`
-- [ ] **2.6** `Services/SettingsManager.cs`
-- [ ] **2.7** `Services/LicenseManager.cs`
+- [x] **2.1** `Core/Models/AccountConfig.cs`
+- [x] **2.2** `Core/Models/VideoGenConfig.cs`
+- [x] **2.3** `Core/Models/AppSettings.cs`
+- [x] **2.4** `Core/Helpers/HmacHelper.cs` (license)
+- [x] **2.5** `Core/Helpers/MachineIdHelper.cs`
+- [x] **2.6** `Services/SettingsManager.cs`
+- [x] **2.7** `Services/LicenseManager.cs`
 
 ### PHASE 3 — Chrome / Browser Engine
-- [ ] **3.1** `Services/Chrome/StealthChrome.cs` — launch Chrome, patch navigator.webdriver
-- [ ] **3.2** `Services/Chrome/ChromeProcessManager.cs` — start/stop/find Chrome
-- [ ] **3.3** `Services/Chrome/CdpSession.cs` — raw CDP WebSocket calls
-- [ ] **3.4** `Services/Chrome/ChromeProfileManager.cs` — quản lý profiles
+- [x] **3.1** `Services/Chrome/StealthChrome.cs` — launch Chrome, patch navigator.webdriver
+- [x] **3.2** `Services/Chrome/ChromeProcessManager.cs` — start/stop/find Chrome
+- [x] **3.3** `Services/Chrome/CdpSession.cs` — raw CDP WebSocket calls
+- [x] **3.4** `Services/Chrome/ChromeProfileManager.cs` — quản lý profiles
 
 ### PHASE 4 — Login & Auth
 - [x] **4.1** `Services/Auth/LoginService.cs` — tự động login Google qua Chrome
@@ -69,17 +68,17 @@ NEXT_TASK: PHASE_7 / Task 7.2 — TabTextToVideo.xaml (UI đầy đủ)```
 - [x] **6.3** `Services/Workflow/WorkflowControl.cs` — start/stop/pause
 
 ### PHASE 7 — WPF UI
-- [ ] **7.1** `App/MainWindow.xaml` + `MainWindow.xaml.cs`
-- [ ] **7.2** `App/Views/Tabs/TabTextToVideo.xaml`
+- [x] **7.1** `App/MainWindow.xaml` + `MainWindow.xaml.cs`
+- [x] **7.2** `App/Views/Tabs/TabTextToVideo.xaml`
 - [ ] **7.3** `App/Views/Tabs/TabImageToVideo.xaml`
-- [ ] **7.4** `App/Views/Tabs/TabCreateImage.xaml`
+- [x] **7.4** `App/Views/Tabs/TabCreateImage.xaml`
 - [ ] **7.5** `App/Views/Tabs/TabIdeaToVideo.xaml`
 - [ ] **7.6** `App/Views/Tabs/TabCharacterSync.xaml`
-- [ ] **7.7** `App/Views/Tabs/TabSettings.xaml`
+- [x] **7.7** `App/Views/Tabs/TabSettings.xaml`
 - [ ] **7.8** `App/Views/Tabs/TabGrokSettings.xaml`
-- [ ] **7.9** `App/Controls/StatusPanel.xaml`
+- [x] **7.9** `App/Controls/StatusPanel.xaml`
 - [ ] **7.10** `App/Controls/ProgressBar.xaml`
-- [ ] **7.11** `App/Styles/Theme.xaml` — dark theme
+- [x] **7.11** `App/Styles/Theme.xaml` — dark theme
 
 ### PHASE 8 — License UI
 - [ ] **8.1** `App/Views/LicenseWindow.xaml` — cửa sổ nhập license
@@ -236,6 +235,7 @@ Google Login flow:
 [2026-05-11] Session 5: Task 5.2 I2I + 5.4 VeoI2V + 5.6 GrokI2V
 [2026-05-11] Session 6: Task 5.7+5.8+5.9 — Phase 5 XONG
 [2026-05-11] Session 7: Task 6.1+6.2+6.3 — Phase 6 XONG
+[2026-05-11] Session 8: TabTextToVideo + TabCreateImage + TabSettings + App DI
 ```
 
 ---

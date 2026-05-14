@@ -4,7 +4,7 @@ using System.Windows.Media;
 
 namespace GrokPY.App.Controls;
 
-public partial class StatusPanel : UserControl
+public partial class StatusPanel :  System.Windows.Controls.UserControl
 {
     public StatusPanel()
     {
@@ -34,8 +34,8 @@ public partial class StatusPanel : UserControl
         Dispatcher.Invoke(() =>
         {
             ChromeStatusDot.Fill = connected
-                ? new SolidColorBrush(Color.FromRgb(0, 184, 148))   // green
-                : new SolidColorBrush(Color.FromRgb(255, 107, 107)); // red
+                ? new SolidColorBrush(System.Windows.Media.Color.FromRgb(0, 184, 148))   // green
+                : new SolidColorBrush(System.Windows.Media.Color.FromRgb(255, 107, 107)); // red
 
             ChromeStatusText.Text = message ?? (connected ? "Chrome: Đã kết nối" : "Chrome: Chưa kết nối");
         });
